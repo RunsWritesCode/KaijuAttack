@@ -35,4 +35,6 @@ public abstract class Vehicle {
     }
 
     abstract void takeDamage(int damage);
+
+    abstract void attack(Kaiju kaiju);
 }

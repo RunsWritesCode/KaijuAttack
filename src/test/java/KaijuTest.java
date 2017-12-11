@@ -35,4 +35,10 @@ public class KaijuTest {
         assertEquals(0, tank1.getHealthValue());
     }
 
+    @Test
+    public void canFigthBack() {
+        tank1.attack(lizard1);
+        assertEquals(-2, lizard1.getHealthValue());
+    }
+
 }
