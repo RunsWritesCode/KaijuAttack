@@ -15,8 +15,8 @@ public class KaijuTest {
     public void before() {
       lizard1 = new Lizard("Steve", 2, 10);
       lizard2 = new Lizard("Woz", 9, 4);
-      tank1 = new Tank("Big tank", 10);
-      tank2 = new Tank("Small tank", 8);
+      tank1 = new Tank("Big tank", 10, 4);
+      tank2 = new Tank("Small tank", 8, 2);
     }
 
     @Test
@@ -27,6 +27,12 @@ public class KaijuTest {
     @Test
     public void canRoar() {
         assertEquals("Roar!", lizard1.roar());
+    }
+
+    @Test
+    public void canAttack() {
+        lizard1.attack(tank1);
+        assertEquals(0, tank1.getHealthValue());
     }
 
 }

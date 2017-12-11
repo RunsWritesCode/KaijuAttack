@@ -1,8 +1,8 @@
 public abstract class Kaiju {
 
-    private String name;
-    private int healthValue;
-    private int attackValue;
+    public String name;
+    public int healthValue;
+    protected int attackValue;
 
     public Kaiju(String name, int healthValue, int attackValue) {
         this.name = name;
@@ -34,6 +34,9 @@ public abstract class Kaiju {
         this.attackValue = attackValue;
     }
 
+    abstract void attack(Vehicle vehicle);
+
     public abstract String roar();
 
+    abstract void takeDamage(int damage);
 }
